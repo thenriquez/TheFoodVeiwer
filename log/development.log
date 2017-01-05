@@ -890,3 +890,761 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 89ms (Views: 75.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/restaurants" for ::1 at 2017-01-05 17:22:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 391ms (Views: 362.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/restaurants/new" for ::1 at 2017-01-05 17:29:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (23.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (39.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 398ms (Views: 365.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2017-01-05 17:30:39 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YbrUABIZKab4tZdONEqFnChQswNi3E0QPvKuUMLWX8s6SKGQXa2xpcMJefaHLYnumYUbHWNqokTkYo/JYyRY6A==", "restaurant"=>{"name"=>"WIngstop", "address"=>"2118 Cottman Ave, Philadelphia, PA 19149-1133", "phone"=>"(215) 281-9464", "website"=>"Wingstop.com"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "phone", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "WIngstop"], ["address", "2118 Cottman Ave, Philadelphia, PA 19149-1133"], ["phone", "(215) 281-9464"], ["website", "Wingstop.com"], ["created_at", 2017-01-05 22:30:39 UTC], ["updated_at", 2017-01-05 22:30:39 UTC]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/2
+Completed 302 Found in 18ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 17:30:39 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 136ms (Views: 118.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:30:41 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 145ms (Views: 126.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/new" for ::1 at 2017-01-05 17:30:45 -0500
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 152ms (Views: 131.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2017-01-05 17:32:17 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s416kNuGu9cHtX8YXaXXMZEN+VvfUCEF56BI2L6+7tGp8TtLOdDkPYppwHQXjrngUGlACp1SaRfDxfRl1GNrvw==", "restaurant"=>{"name"=>"QDOBA Mexican Eats", "address"=>"MarketFair, 3535 US Route 1, Suite 179, Princeton, NJ 08540", "phone"=>"(609) 378-3109", "website"=>"www.qdoba.com"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "phone", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "QDOBA Mexican Eats"], ["address", "MarketFair, 3535 US Route 1, Suite 179, Princeton, NJ 08540"], ["phone", "(609) 378-3109"], ["website", "www.qdoba.com"], ["created_at", 2017-01-05 22:32:17 UTC], ["updated_at", 2017-01-05 22:32:17 UTC]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/3
+Completed 302 Found in 13ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/restaurants/3" for ::1 at 2017-01-05 17:32:17 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 135ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:32:20 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/new" for ::1 at 2017-01-05 17:32:45 -0500
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 161ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2017-01-05 17:33:29 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S6RTlqIwfMoJKN7AOA5bVNrb0SjJQmILLwqDn+arhuhR2BJNQGYjIIT0YaxyJTWFG79oeYtAKhkLbz8ijHYDhg==", "restaurant"=>{"name"=>"Buffalo Wild Wings", "address"=>"3465 US-1, Princeton, NJ 08540", "phone"=>"(609) 803-3323", "website"=>" buffalowildwings.com"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "phone", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Buffalo Wild Wings"], ["address", "3465 US-1, Princeton, NJ 08540"], ["phone", "(609) 803-3323"], ["website", " buffalowildwings.com"], ["created_at", 2017-01-05 22:33:29 UTC], ["updated_at", 2017-01-05 22:33:29 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 11ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/restaurants/4" for ::1 at 2017-01-05 17:33:29 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 117.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:33:33 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for ::1 at 2017-01-05 17:34:41 -0500
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 161ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for ::1 at 2017-01-05 17:35:07 -0500
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S/DNn1kCwhzxxT4A8iQwkDiimEgrL458xxPPB5ML3NJRjIxEu1Sd9nwZgWy4D15B+cYhGWktxm7jdnO6+dZZvA==", "restaurant"=>{"name"=>"StarBucks", "address"=>"800 A Denow Road Pennington, NJ 08534", "phone"=>"609-818-1541", "website"=>"starbucks.com"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("name", "address", "phone", "website", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "StarBucks"], ["address", "800 A Denow Road Pennington, NJ 08534"], ["phone", "609-818-1541"], ["website", "starbucks.com"], ["created_at", 2017-01-05 22:35:07 UTC], ["updated_at", 2017-01-05 22:35:07 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 12ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2017-01-05 17:35:07 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 123.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:35:09 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 121.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:35:15 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:35:16 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 153ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 17:35:17 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2017-01-05 17:35:19 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 131ms (Views: 116.5ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToRestaurants (20170105224702)
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "restaurants" ADD "image" varchar[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170105224702"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/restaurants/5" for ::1 at 2017-01-05 17:57:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 364ms (Views: 321.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 17:57:53 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 169ms (Views: 151.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/2/edit" for ::1 at 2017-01-05 17:57:59 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (29.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (42.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 198ms (Views: 183.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/restaurants/2" for ::1 at 2017-01-05 17:59:13 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xj386IVZ+AuZ5Ks9AltA+1W+J21z9EWq5O5TQxlDzTAxfgr+Fm81cNoV309/IzmyDd4c5CZd1wrXsLsZTeuGjw==", "restaurant"=>{"name"=>"WIngstop", "address"=>"2118 Cottman Ave, Philadelphia, PA 19149-1133", "phone"=>"(215) 281-9464", "website"=>"Wingstop.com", "image"=>#<ActionDispatch::Http::UploadedFile:0x69e15b8 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-1kge3na.jpg>, @original_filename="icon-logo-seo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"icon-logo-seo.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "icon-logo-seo.jpg"], ["updated_at", 2017-01-05 22:59:13 UTC], ["id", 2]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/2
+Completed 302 Found in 40ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 17:59:13 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:02:50 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 136ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:02:59 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 123.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:03:00 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 139ms (Views: 119.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:03:01 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 141ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 18:03:03 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 134ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:03:06 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:03:29 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2/edit" for ::1 at 2017-01-05 18:03:31 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.5ms)
+  Rendered restaurants/edit.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 148ms (Views: 132.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/restaurants/2" for ::1 at 2017-01-05 18:03:36 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKZ4phouFjB72PVy2OO3WZT5Gaa32N2gdkkYsI4m73yv5Y6wiRjbSzgpgQClm84QzJkiL+JxTwBFF/Dq2o6kww==", "restaurant"=>{"name"=>"WIngstop", "address"=>"2118 Cottman Ave, Philadelphia, PA 19149-1133", "phone"=>"(215) 281-9464", "website"=>"Wingstop.com", "image"=>#<ActionDispatch::Http::UploadedFile:0xb5cc518 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-uhvk3m.jpg>, @original_filename="icon-logo-seo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"icon-logo-seo.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = ?, "image" = ? WHERE "restaurants"."id" = ?[0m  [["updated_at", 2017-01-05 23:03:36 UTC], ["image", "icon-logo-seo.jpg"], ["id", 2]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/2
+Completed 302 Found in 34ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:03:36 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 133ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:05:08 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 18:05:15 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 144ms (Views: 124.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/2" for ::1 at 2017-01-05 18:05:17 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 126.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/3" for ::1 at 2017-01-05 18:07:03 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= image_tag @restaurant.image_url %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @restaurant.name %>
+  
+app/views/restaurants/show.html.erb:3:in `_app_views_restaurants_show_html_erb___525689767_89210112'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (735.2ms)
+Started GET "/" for ::1 at 2017-01-05 18:07:11 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 124.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/3/edit" for ::1 at 2017-01-05 18:07:15 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (3.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 156ms (Views: 135.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/restaurants/3" for ::1 at 2017-01-05 18:07:21 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ekijdN+XGmmDIeUBxq0PAcNhTfTvf58Bo1StS98Ao5/owvIWQOqIg1Zp9mcMUi9PY8ZEkQVeCIF5bUidZTjMnw==", "restaurant"=>{"name"=>"QDOBA Mexican Eats", "address"=>"MarketFair, 3535 US Route 1, Suite 179, Princeton, NJ 08540", "phone"=>"(609) 378-3109", "website"=>"www.qdoba.com", "image"=>#<ActionDispatch::Http::UploadedFile:0x9b4a9e0 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-1cffst9.jpg>, @original_filename="qdoba-mexican-eats-logo-.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"qdoba-mexican-eats-logo-.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"3"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "qdoba-mexican-eats-logo-.jpg"], ["updated_at", 2017-01-05 23:07:21 UTC], ["id", 3]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/3
+Completed 302 Found in 36ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/restaurants/3" for ::1 at 2017-01-05 18:07:21 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 18:07:23 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 144ms (Views: 120.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/4" for ::1 at 2017-01-05 18:07:26 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= image_tag @restaurant.image_url %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @restaurant.name %>
+  
+app/views/restaurants/show.html.erb:3:in `_app_views_restaurants_show_html_erb___525689767_88377312'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (732.0ms)
+Started GET "/" for ::1 at 2017-01-05 18:07:32 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 123.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/4/edit" for ::1 at 2017-01-05 18:07:36 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.5ms)
+  Rendered restaurants/edit.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 161ms (Views: 137.2ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/restaurants/4" for ::1 at 2017-01-05 18:08:39 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YmakIm3+MuvA/EU6hVzcrH+1fbDUQGzku89BwebbijeTnBXtSUYOOrcKWrlCyAeMbvVh+YDePg5oppK+oETrsw==", "restaurant"=>{"name"=>"Buffalo Wild Wings", "address"=>"3465 US-1, Princeton, NJ 08540", "phone"=>"(609) 803-3323", "website"=>" buffalowildwings.com", "image"=>#<ActionDispatch::Http::UploadedFile:0xa45db20 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-t9oa8e.jpg>, @original_filename="Buffalo_Wild_Wings_NEW_071112.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"Buffalo_Wild_Wings_NEW_071112.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "Buffalo_Wild_Wings_NEW_071112.jpg"], ["updated_at", 2017-01-05 23:08:39 UTC], ["id", 4]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/4
+Completed 302 Found in 49ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/restaurants/4" for ::1 at 2017-01-05 18:08:39 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 145ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2017-01-05 18:08:41 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 137ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/5/edit" for ::1 at 2017-01-05 18:08:44 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (3.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 155ms (Views: 136.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/restaurants/5" for ::1 at 2017-01-05 18:09:14 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VdvSU1Di9Uv3aqjiEdyVmgpYZt8Fpr7OObV6pAYHrEJXKCctuYYmjGDFwc9tzOrbk3ITMNWgLlkpoEkYzc5t1w==", "restaurant"=>{"name"=>"StarBucks", "address"=>"800 A Denow Road Pennington, NJ 08534", "phone"=>"609-818-1541", "website"=>"starbucks.com"}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2017-01-05 18:09:14 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <%= image_tag @restaurant.image_url %>
+    4: <p>
+    5:   <strong>Name:</strong>
+    6:   <%= @restaurant.name %>
+  
+app/views/restaurants/show.html.erb:3:in `_app_views_restaurants_show_html_erb___525689767_56568696'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (732.0ms)
+Started PATCH "/restaurants/5" for ::1 at 2017-01-05 18:09:35 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d4F4WCbg/Bc/XNUyEksqWKMFXNQ7sDXcbbCFTRK7LxEscw3IaVRkFATgO4qhLCYqEtD0yjoG2oi3IKTUs0koMg==", "restaurant"=>{"name"=>"StarBucks", "address"=>"800 A Denow Road Pennington, NJ 08534", "phone"=>"609-818-1541", "website"=>"starbucks.com", "image"=>#<ActionDispatch::Http::UploadedFile:0x3a0cfe0 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-75vwgs.png>, @original_filename="Starbucks_Coffee_Logo.svg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"Starbucks_Coffee_Logo.svg.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "Starbucks_Coffee_Logo.svg.png"], ["updated_at", 2017-01-05 23:09:35 UTC], ["id", 5]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 23ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2017-01-05 18:09:35 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 129ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/5/edit" for ::1 at 2017-01-05 18:10:03 -0500
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/edit.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 132.3ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/restaurants/5" for ::1 at 2017-01-05 18:10:10 -0500
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AeSpUlhRcrcYWlgdqXfAQzFYUCgxS/yeLwnQULtJWr8DF1wssTWhcI/1MTDVZ78CqHIlx+FNbAk/HOPscICbKg==", "restaurant"=>{"name"=>"StarBucks", "address"=>"800 A Denow Road Pennington, NJ 08534", "phone"=>"609-818-1541", "website"=>"starbucks.com", "image"=>#<ActionDispatch::Http::UploadedFile:0xa1c2b00 @tempfile=#<Tempfile:C:/Users/Terrence/AppData/Local/Temp/RackMultipart20170105-4680-mn6hui.png>, @original_filename="Starbucks_Coffee_Logo.svg (1).png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"Starbucks_Coffee_Logo.svg (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "Starbucks_Coffee_Logo.svg__1_.png"], ["updated_at", 2017-01-05 23:10:10 UTC], ["id", 5]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 32ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2017-01-05 18:10:10 -0500
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 152ms (Views: 122.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/about" for ::1 at 2017-01-05 18:10:14 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 133ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-05 18:10:15 -0500
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_bootstrap.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 150ms (Views: 126.2ms | ActiveRecord: 0.5ms)
+
+
