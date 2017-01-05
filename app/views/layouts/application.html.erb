@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FoodReviewer</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    <%= render 'layouts/bootstrap' %>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    <div class="container-fuild">
+
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
+  </body>
+</html>
