@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
-gem 'pg', '~> 0.19.1.pre20170115074000', group: :development
+gem 'pg', '~> 0.19.1.pre20170115074000', group: :production
 
 group :development do
   gem 'web-console', '>= 3.3.0'
