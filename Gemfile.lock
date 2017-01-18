@@ -175,7 +175,7 @@ DEPENDENCIES
   fog-aws
   jbuilder (~> 2.5)
   jquery-rails
-  pg (~> 0.19.1.pre20170115074000)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
