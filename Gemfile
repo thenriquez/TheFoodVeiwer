@@ -21,11 +21,12 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
+gem 'pg', '~> 0.19.1.pre20170115074000', group: :development
 
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'pg', group: :production
+
 gem 'carrierwave'
 gem 'figaro'

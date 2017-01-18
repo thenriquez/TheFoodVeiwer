@@ -99,7 +99,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.7.0.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
-    pg (0.19.0-x86-mingw32)
+    pg (0.19.1.pre20170115074000-x86-mingw32)
     puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -175,7 +175,7 @@ DEPENDENCIES
   fog-aws
   jbuilder (~> 2.5)
   jquery-rails
-  pg
+  pg (~> 0.19.1.pre20170115074000)
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
